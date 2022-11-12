@@ -29,4 +29,4 @@ const recommendationsData = [
     }
 ];
 
-export { recommendationsData };
+export default recommendationsData;

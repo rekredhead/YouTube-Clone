@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { recommendationsData } from "./recommendationsData";
+import recommendationsData from "./recommendationsData";
 
 export default function RecommedationBar() {
     const buttonCss = "bg-gray-100 px-3 py-1 text-sm rounded-md"+
@@ -11,7 +11,8 @@ export default function RecommedationBar() {
     });
     
     return (
-        <div className="fixed flex top-14 left-[4.5rem] right-0 h-12 items-center justify-center">
+        <div className="bg-white fixed flex top-14 left-[4.5rem]
+            right-0 h-12 items-center justify-center z-10">
             {recommendationsElements}
         </div>
     );

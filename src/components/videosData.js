@@ -7,7 +7,7 @@ const videosData = [
         isVerified: false,
         viewCount: 1800,
         time_released: "1 hour",
-        thumbnail_link: "./images/thumbnails/thumbnail_1.png",
+        thumbnail_link: "./images/thumbnails/thumbnail_1",
         pfp_link: "./images/profile-pictures/pfp_1",
         link: "https://www.youtube.com/watch?v=70z-ll4UPK8"
     },
@@ -19,8 +19,8 @@ const videosData = [
         isVerified: true,
         viewCount: 3300000,
         time_released: "1 year",
-        thumbnail_link: "./images/thumbnails/thumbnail_2.png",
-        pfp_link: "./images/profile-pictures/pfp_2.png",
+        thumbnail_link: "./images/thumbnails/thumbnail_2",
+        pfp_link: "./images/profile-pictures/pfp_2",
         link: "https://www.youtube.com/watch?v=u7TQz52QmH4"
     },
     {
@@ -193,4 +193,4 @@ const videosData = [
     }
 ];
 
-export { videosData };
+export default videosData;

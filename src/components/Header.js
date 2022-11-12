@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <header className="fixed flex top-0 right-0 left-[4.5rem] justify-between h-14">
+        <header className="bg-white fixed flex top-0 right-0 left-[4.5rem] justify-between h-14 z-10">
             <div className="flex items-center">
                 <img className="w-9 h-9" src="./images/youtube.svg" alt=""/>
                 <p className="font-bold text-[1.4rem]">YouTube</p>
