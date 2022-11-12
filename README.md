@@ -1,3 +1,9 @@
+# About the Project
+- Built by myself using Tailwindcss and React.js
+- Plan to use Youtube Api for data instead of a json file
+- Enable Dark Mode
+- Add Shorts and mixed Videos
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
