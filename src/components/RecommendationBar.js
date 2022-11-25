@@ -11,7 +11,7 @@ export default function RecommedationBar() {
     });
     
     return (
-        <div className="bg-white fixed flex top-14 left-[4.5rem]
+        <div className="bg-white fixed flex top-14 left-56
             right-0 h-12 items-center justify-center z-10">
             {recommendationsElements}
         </div>

@@ -7,9 +7,9 @@ export default function VideoCard(props) {
 
     function openVideo() { window.open(link); }
     return (
-        <div onClick={openVideo} className="w-[21rem] h-80 cursor-pointer">
+        <div onClick={openVideo} className="w-[22rem] h-80 cursor-pointer hover:bg-gray-100 rounded-xl">
             <div className="flex relative rounded-xl overflow-hidden">
-                <img className="h-48 w-full" src={thumbnail_link+'.png'} alt="Video Unavailable"/>
+                <img className="h-52 w-full" src={thumbnail_link+'.png'} alt="Video Unavailable"/>
                 <div className="flex absolute bg-black text-[0.8rem] font-semibold
                     text-white px-1 bottom-1 right-1 rounded-md">{duration}</div>
             </div>

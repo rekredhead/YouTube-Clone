@@ -1,7 +1,13 @@
 export default function Header() {
     return (
-        <header className="bg-white fixed flex top-0 right-0 left-[4.5rem] justify-between h-14 z-10">
+        <header className="bg-white fixed flex top-0 right-0 left-0 justify-between h-14 z-10 px-2">
             <div className="flex items-center">
+                <div className="flex items-center justify-center pr-3">
+                    <button
+                        className="flex p-2 rounded-full hover:bg-gray-200 active:bg-gray-300">
+                        <span className="material-icons">menu</span>
+                    </button>
+                </div>
                 <img className="w-9 h-9" src="./images/youtube.svg" alt=""/>
                 <p className="font-bold text-[1.4rem]">YouTube</p>
             </div>
@@ -26,7 +32,7 @@ export default function Header() {
                 <button>
                     <span className="material-icons">notifications</span>
                 </button>
-                <button className="bg-fuchsia-700 rounded-full w-8 h-8">
+                <button className="flex bg-fuchsia-700 rounded-full px-3 py-[0.3rem] mb-1">
                     <p className="text-white">K</p>
                 </button>
             </div>

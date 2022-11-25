@@ -10,8 +10,8 @@ export default function Body() {
     });
 
     return (
-        <div className="grid 2columns:grid-cols-2 3columns:grid-cols-3 4columns:grid-cols-4 5columns:grid-cols-5
-            mt-[8.5rem] ml-24 mr-5 gap-4 z-0">
+        <div className="grid 2columns:grid-cols-2 3columns:grid-cols-3 4columns:grid-cols-4 5columns:grid-cols-4
+            mt-[8.5rem] ml-80 mr-24 gap-4 z-0">
             {videoElements}
         </div>
     );
