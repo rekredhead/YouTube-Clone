@@ -7,10 +7,8 @@ export default function Body(props) {
     const [videos] = useState(videosData);
 
     const videoElements = videos.map(item => {
-        return <VideoCard key={item.id} data={item}/>
+        return <VideoCard key={item.id} data={item} darkMode={darkMode}/>
     });
-
-    // Add warning when user screen is mobile size
 
     return (
         <div className="grid 2columns:grid-cols-1 3columns:grid-cols-2

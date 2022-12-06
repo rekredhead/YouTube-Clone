@@ -7,19 +7,22 @@ import { useState } from "react";
 export default function App() {
     const [darkMode, setDarkMode] = useState(false);
     let bodyCss = darkMode ? "bg-black" : "bg-white";
-    bodyCss += " h-screen";
+    bodyCss += " pt-1"
 
     function toggleDarkmode() {
         setDarkMode(prevState => !prevState);
-        console.log(darkMode ? "Dark mode on" : "Dark mode off");
     }
 
-    return (
+    return window.innerWidth > 900 ?
+    (
         <div className={bodyCss}>
             <Header toggle={toggleDarkmode} darkMode={darkMode}/>
             <RecommedationBar darkMode={darkMode}/>
             <SideBar darkMode={darkMode}/>
             <Body darkMode={darkMode}/>
         </div>
+    ) :
+    (
+        <h1 className="text-center text-xl font-bold">Sorry! Currently only supports Desktop</h1>
     );
 }
