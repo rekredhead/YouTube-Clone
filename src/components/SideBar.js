@@ -1,8 +1,27 @@
 import SideBarButton from "./SideBarButton";
+import SideBarSubscriptionButton from "./SideBarSubscriptionButton";
+import playlistData from "../data_files/playlistData";
+import subscriptionData from "../data_files/subscriptionData";
+import { useState } from "react";
 
 export default function SideBar() {
     const sideBarSectionsCss = "border border-b-gray-300 px-2 py-2";
     const footerText = "text-[0.78rem] text-justify font-semibold mb-2";
+
+    const [playlists] = useState(playlistData);
+    const [subscriptions] = useState(subscriptionData);
+
+    const [showPlaylists, setShowPlaylists] = useState(false);
+    
+    
+    const playlistElements = playlists.map(item => {
+        return <SideBarButton key={item.id} icon="playlist_play" text={item.title}/>
+    });
+    const subscriptionElements = subscriptions.map(item => {
+        return <SideBarSubscriptionButton key={item.id} data={item}/>
+    });
+
+    function toggleShowPlaylists() { setShowPlaylists(prevState => !prevState); }
 
     return (
         <div className="fixed flex flex-col top-14 bottom-0 left-0 w-56 overflow-scroll">
@@ -16,11 +35,15 @@ export default function SideBar() {
                 <SideBarButton icon="history" text="History"/>
                 <SideBarButton icon="schedule" text="Watch Later"/>
                 <SideBarButton icon="thumb_up" text="Liked Videos"/>
-                <SideBarButton icon="expand_more" text="Show more"/>
+                {showPlaylists ? playlistElements : ''}
+                <SideBarButton
+                    onClick={toggleShowPlaylists}
+                    icon={showPlaylists ? "expand_less" : "expand_more"}
+                    text={showPlaylists ? "Show less" : "Show more"}/>
             </div>
             <div className={sideBarSectionsCss}>
                 <h1>Subscriptions</h1>
-                <SideBarButton icon="subscriptions" text="Subscriptions"/>
+                {subscriptionElements}
             </div>
             <div className={sideBarSectionsCss}>
                 <h1>Explore</h1>
