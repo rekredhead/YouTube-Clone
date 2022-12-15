@@ -13,7 +13,12 @@ export default function App() {
         setDarkMode(prevState => !prevState);
     }
 
-    return window.innerWidth > 900 ?
+    /**Current Issue
+     * Images load well on the remote site (github pages)
+     * Images won't load on the live server (vscode)
+     */
+
+    return (window.innerWidth > 900) ?
     (
         <div className={bodyCss}>
             <Header toggle={toggleDarkmode} darkMode={darkMode}/>
@@ -21,8 +26,12 @@ export default function App() {
             <SideBar darkMode={darkMode}/>
             <Body darkMode={darkMode}/>
         </div>
-    ) :
+    ) : (
+        <div>There is a reason</div>
+    );
+    /*
     (
         <h1 className="text-center text-xl font-bold">Sorry! Currently only supports Desktop</h1>
     );
+    */
 }
